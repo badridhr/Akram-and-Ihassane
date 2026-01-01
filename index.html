@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Hey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color:#f8f9fa;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+section.active{
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+}
+
+.text{
+  max-width:620px;
+  font-size:1.5rem;
+  line-height:1.8;
+  text-align: center;
+  padding: 40px;
+
+}
+
+#typewriter{
+  font-size:2.2rem;
+  letter-spacing:1px;
+  font-weight: 300;
+  color: #e2b1ff;
+  text-shadow: 0 0 10px rgba(226, 177, 255, 0.3);
+}
+
+button{
+  margin-top:28px;
+  padding:14px 36px;
+  border-radius:50px;
+  border:2px solid #ff85a2;
+  background: linear-gradient(45deg,#ff85a2, #ff9eb5);
+  color:#1a1a2e;
+  font-size:1.1rem;
+  cursor:pointer;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 5px 15px rgba(255, 133, 162, 0.3);
+}
+
+button:hover{
+  background: linear-gradient(45deg, #ff9eb5, #ffb3c6);
+  border-color: #ff9eb5;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 133, 162, 0.4);
+}
+
+/* Indicateurs de progression */
+.progress-indicators {
+  position: fixed;
+  bottom: 90px; /* Ajusté pour laisser de la place au footer */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 100;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-dot:hover {
+  background: rgba(255, 133, 162, 0.5);
+  transform: scale(1.2);
+}
+
+.progress-dot.active {
+  background: #ff85a2;
+  box-shadow: 0 0 10px rgba(255, 133, 162, 0.5);
+  transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  background: linear-gradient(to top, rgba(26, 26, 46, 0.95), transparent);
+  z-index: 99;
+  font-family: 'Courier New', monospace;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  border-top: 1px solid rgba(255, 133, 162, 0.3);
+  border-bottom: 1px solid rgba(255, 133, 162, 0.3);
+}
+
+/* Animation subtile pour le texte */
+@keyframes gentleGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.9; }
+}
+
+.text {
+  animation: gentleGlow 8s ease-in-out infinite;
+}
+
+/* Étoiles de fond */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Étoiles de fond -->
+<div class="stars" id="stars"></div>
+
+<!-- Musique Happy New Year avec autoplay -->
+
+
+
+
+<section class="active">
+  <div class="text">
+    <div id="typewriter"></div>
+  </div>
+</section>
+
+
+<section>
+  <div class="text">
+    F début ta3 l 3am jdid habit n9olek beli plastek f hayati bdeletli bzef hajet ❤️ <br>
+    dahktek hadrtek ou tkhmemek 3liya ya3touni  énergie manl9ahoumech mea hata bnadem <br> 
+
+  </div>
+</section>
+
+<section>
+  <div class="text">
+    natmena l3am jdid ykoun m3amera bel fareh ou raht lbal ou diri fih wsh raki haba ou ana rah nkoun dayemen m3ek <br>
+    ndhak meak ou nkoun meak f lamliha ou lmoura ❤️
+
+  </div>
+</section>
+
+<section>
+  <div class="text">
+    Merci ki nti insana bzef mlih bzef ❤️ 9lbek byad ou jbzef 3a9el ou nchlah 2026❤️  ikoun 3am ta3 houb binatna❤️ ou ntfahmou fih kter ou n9rbou lba3dana fih kter <br>
+
+
+    
+  </div>
+</section>
+
+
+<section>
+  <div class="text">
+    Ida Rahlek z3ef 3abzi 3la Yes<br><br>
+    <button onclick="reply()">Yes</button>
+    <p id="answer" style="margin-top:25px; font-size:1.2rem; color:#a8e6cf;"></p>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    Début 2026 • Ihssane and Akram ❤️
+  </div>
+</footer>
+
+<!-- Indicateurs de progression -->
+<div class="progress-indicators" id="progressIndicators"></div>
+
+<script>
+/* TYPEWRITER */
+const text = "Happy New Year Ihssane ❤️❤️ ";
+let i = 0;
+const speed = 160;
+const target = document.getElementById("typewriter");
+
+function type(){
+  if(i < text.length){
+    target.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, speed);
+  }
+}
+type();
+
+/* CRÉER LES ÉTOILES */
+function createStars() {
+  const starsContainer = document.getElementById('stars');
+  const starCount = 100;
+  
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    
+    // Position aléatoire
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    
+    // Taille aléatoire
+    const size = Math.random() * 3 + 1;
+    
+    // Animation delay aléatoire
+    const delay = Math.random() * 3;
+    
+    star.style.left = `${x}%`;
+    star.style.top = `${y}%`;
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.animationDelay = `${delay}s`;
+    
+    starsContainer.appendChild(star);
+  }
+}
+
+/* VARIABLES GLOBALES */
+let currentSectionIndex = 0;
+const sections = document.querySelectorAll('section');
+let autoScrollInterval;
+const CHANGE_INTERVAL = 10000; // 10 secondes
+
+/* INITIALISATION */
+function init() {
+  // Créer les étoiles
+  createStars();
+  
+  // Créer les indicateurs de progression
+  createProgressIndicators();
+  
+  // Afficher la première section
+  showSection(0);
+  
+  // Démarrer le défilement automatique
+  startAutoScroll();
+  
+  // Ajouter l'événement de clic pour les indicateurs
+  document.querySelectorAll('.progress-dot').forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      stopAutoScroll();
+      showSection(index);
+      setTimeout(startAutoScroll, 10000); // Redémarrer après 10 secondes d'inactivité
+    });
+  });
+}
+
+/* CRÉER LES INDICATEURS DE PROGRESSION */
+function createProgressIndicators() {
+  const container = document.getElementById('progressIndicators');
+  sections.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.className = 'progress-dot';
+    if (index === 0) dot.classList.add('active');
+    container.appendChild(dot);
+  });
+}
+
+/* AFFICHER UNE SECTION SPÉCIFIQUE */
+function showSection(index) {
+  // S'assurer que l'index est dans les limites
+  if (index < 0) index = sections.length - 1;
+  if (index >= sections.length) index = 0;
+  
+  // Mettre à jour l'index courant
+  currentSectionIndex = index;
+  
+  // Masquer toutes les sections
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+  
+  // Afficher la section actuelle
+  sections[index].classList.add('active');
+  
+  // Mettre à jour les indicateurs
+  updateProgressIndicators(index);
+}
+
+/* METTRE À JOUR LES INDICATEURS DE PROGRESSION */
+function updateProgressIndicators(index) {
+  const dots = document.querySelectorAll('.progress-dot');
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+}
+
+/* DÉMARRER LE DÉFILEMENT AUTOMATIQUE */
+function startAutoScroll() {
+  autoScrollInterval = setInterval(() => {
+    showSection(currentSectionIndex + 1);
+  }, CHANGE_INTERVAL);
+}
+
+/* ARRÊTER LE DÉFILEMENT AUTOMATIQUE */
+function stopAutoScroll() {
+  if (autoScrollInterval) {
+    clearInterval(autoScrollInterval);
+    autoScrollInterval = null;
+  }
+}
+
+/* FONCTION REPLY POUR LE BOUTON */
+function reply(){
+  const answer = document.getElementById("answer");
+    answer.innerText = "Nhabek ou nb9a daymen nhabek ou rah iji nhar ou ndik fih Ou Semhili jmi3 nhar kount m9le9 fih ou ma3rftech nahder meak ";
+  answer.style.animation = "gentleGlow 2s ease-in-out";
+  
+  // Arrêter le défilement automatique lorsqu'on interagit
+  stopAutoScroll();
+  
+  // Ajouter une petite animation au bouton
+  const button = document.querySelector('button');
+  button.style.background = "linear-gradient(45deg, #a8e6cf, #dcedc1)";
+  button.style.borderColor = "#a8e6cf";
+  button.style.color = "#1a1a2e";
+  button.innerHTML = "Haked nansaw ay haja fatet 3yana";
+}
+
+/* NAVIGATION AU CLAVIER */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+    stopAutoScroll();
+    showSection(currentSectionIndex + 1);
+    setTimeout(startAutoScroll, 10000);
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+    stopAutoScroll();
+    showSection(currentSectionIndex - 1);
+    setTimeout(startAutoScroll, 10000);
+  }
+});
+
+/* DÉMARRER L'APPLICATION */
+window.addEventListener('load', init);
+
+/* MUSIQUE HAPPY NEW YEAR */
+const music = document.getElementById("bgMusic");
+music.volume = 0.25;
+
+// Tenter de jouer la musique immédiatement
+try {
+  music.play();
+} catch (e) {
+  console.log("La musique ne peut pas être jouée automatiquement:", e);
+}
+</script>
+
+
+</body>
+</html>
